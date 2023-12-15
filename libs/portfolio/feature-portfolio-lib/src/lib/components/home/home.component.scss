@@ -1,0 +1,35 @@
+@import '../../../../assets/styles/styles';
+.container-fluid {
+  background: $steelBlue;
+  padding: 0 6rem;
+  color: $white;
+  font-size: 1rem;
+  padding-bottom: 500px;
+
+  .left,
+  .right {
+    padding-top: 100px;
+  }
+  .left {
+    @media only screen and (min-width: 1200px) {
+      top: 0;
+      max-height: 100vh;
+      position: sticky;
+    }
+  }
+
+  .right {
+    .full-resume-link > a.link {
+      color: inherit;
+      text-decoration-line: none;
+
+      &:hover {
+        text-decoration-color: $teal;
+        text-decoration-line: underline;
+        .bi-arrow-right {
+          transform: translate(5px, 0);
+        }
+      }
+    }
+  }
+}

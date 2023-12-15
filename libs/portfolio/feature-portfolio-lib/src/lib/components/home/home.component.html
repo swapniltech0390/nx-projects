@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row gx-5">
+        <div class="col-xl-6 left">
+            <div class="fixed-column ps-4 pe-4">
+                <h1>Swapnil Jain</h1>
+                <h3>Experienced Front-End Engineer</h3>
+                <h5>I build exceptional and accessible digital experiences for the web.</h5>
+            </div>
+        </div>
+        <div class="col-xl-6 right">
+            <div class="col ps-4 pe-4">
+                <p>Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into
+                    the rabbit hole
+                    of
+                    coding and web development. Fast-forward to today, and I’ve had the privilege of building software
+                    for an
+                    advertising
+                    agency, a start-up, a student-led design studio, and a huge corporation.</p>
+                <p>My main focus these days is building products and leading projects for our clients at Upstatement. In
+                    my free time
+                    I've
+                    also released an online video course that covers everything you need to know to build a web app with
+                    the Spotify
+                    API.</p>
+                <p>When I’m not at the computer, I’m usually rock climbing, hanging out with my wife and two cats, or
+                    running around
+                    Hyrule
+                    searching for Korok seeds.</p>
+            </div>
+            <div class="col experience">
+                <feature-portfolio-experience-template *ngFor="let experience of experienceData"
+                    [experienceDetails]=experience></feature-portfolio-experience-template>
+            </div>
+            <div class="col full-resume-link">
+                <a class="link link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline-opacity-75-hover"
+                    href="assets/docs/resume.pdf" target="_blank">
+                    View Full Resume <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
