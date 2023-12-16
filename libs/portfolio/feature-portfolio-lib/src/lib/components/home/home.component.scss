@@ -72,6 +72,10 @@
     color: $grey;
     .row > .col-12 {
       padding-top: 6rem;
+      &.bottom-note {
+        font-size: 0.875rem;
+        max-width: 40rem;
+      }
     }
 
     .full-resume-link {

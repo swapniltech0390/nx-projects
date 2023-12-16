@@ -65,27 +65,26 @@ export class HomeComponent implements AfterViewInit {
     name: 'Swapnil Jain',
     role: 'Experienced Front-End Engineer',
     shortDescription:
-      'I build exceptional and accessible digital experiences for the web.',
+      'I build seamless digital experiences using MEAN stack, NX monorepo, and Bootstrap technologies.',
     descriptionLine1:
-      'Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into  the rabbit hole  of  coding and web development. Fast-forward to today, and I’ve had the privilege of building  software  for an  advertising  agency, a start-up, a student-led design studio, and <b>a huge corporation.</b> ',
+      'In 2012, my journey as a web developer began, fueled by a passion for crafting digital experiences. Starting with the fundamentals, I gradually honed my skills, evolving through the ever-changing landscape of web development. Over the years, my trajectory led me to embrace the <b>MEAN</b> stack (MongoDB, Express.js, <b>Angular</b>, and Node.js), where I delved into the intricacies of <b>full-stack development</b>.',
     descriptionLine2:
-      "My main focus these days is building products and leading projects for our clients at <b>Upstatement</b>. In my free time  I've  also released an <b>online video course</b> that covers everything you need to know to build a web app with  the Spotify API.",
+      "As technology advanced, so did my journey. The transition to a powerful and scalable <b>NX monorepo</b> architecture became a pivotal moment. Embracing this paradigm shift allowed me to efficiently manage projects, enhance collaboration, and maintain <b>code quality</b>.",
     descriptionLine3:
-      'When I’m not at the computer, I’m usually rock climbing, hanging out with my wife and two cats,or  running around  Hyrule  searching for <b>Korok seeds</b>.',
+      'Outside the coding realm, I find solace and inspiration in the <b>art of travel</b>. Exploring new cultures, tasting diverse cuisines, and immersing myself in unfamiliar landscapes enriches my perspective and fuels creativity in unexpected ways.',
     linkedInUrl: 'https://www.linkedin.com/in/swapnil-jain-j90/',
     gitHubUrl: 'https://github.com/swapniltech0390',
     mailTo: 'jainswapnil90@hotmail.com',
-    bottomNote:
-      ' Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with <b>Next.js</b> and Tailwind CSS, deployed with <b>Vercel</b>. All text is set in the Inter typeface.',
+    bottomNote:'Designed using Bootstrap, coded in VSCode, and managed within an NX monorepo. Leveraging these tools, I created an efficient and scalable application, streamlining development and ensuring code consistency.',
     experience: [
       {
         start: 'OCT 2022',
         end: 'Present',
-        role: 'Senior Software Developer',
+        role: 'Senior Software Engineer',
         companyName: 'EY',
         url: 'https://www.ey.com/en_in',
         description:
-          'Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship.',
+          'Delivering high-quality, robust production code, I foster close collaboration through knowledge sharing and mentorship. Passionate about elevating team capabilities, I thrive in creating innovative solutions while nurturing a culture of continuous learning and shared expertise within the organization.',
         technologyUsed: [
           'Angular 14',
           'MongoDB',
@@ -101,7 +100,7 @@ export class HomeComponent implements AfterViewInit {
         companyName: 'CAPITA',
         url: 'https://www.capita.com/',
         description:
-          'Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship.',
+          'Developed and styled interactive web apps, leveraging Azure Cloud. Acquired foundational knowledge in cloud technologies. Committed to advancing web development through innovative solutions and continuous learning, I contributed to dynamic projects while expanding expertise in cloud computing within the company.',
         technologyUsed: [
           'Angular 8',
           'Node',
@@ -118,7 +117,7 @@ export class HomeComponent implements AfterViewInit {
         companyName: 'TCS',
         url: 'https://www.tcs.com/',
         description:
-          'Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship.',
+          "Pioneered data visualization with D3.js, crafting and packaging high-quality, production-ready applications. Drove efficiency through Scrum management, serving as a Scrum Master. Delivered impactful projects by combining technical acumen with agile methodologies, ensuring seamless collaboration and outstanding results within the company's dynamic environment.",
         technologyUsed: [
           'Angular 4',
           'D3.js',
@@ -131,20 +130,20 @@ export class HomeComponent implements AfterViewInit {
     ],
     projects: [
       {
-        name: 'Build a Spotify Connected',
-        url: 'https://www.spotify.com',
+        name: 'Build a Data Visualization Library',
+        url: 'https://data-viz-lab.web.app/',
         description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        technologyUsed: ['Angular 14', 'MongoDB', 'GraphQL', 'NX Monorepo'],
-        imageUrl: 'assets/images/sample.jpg'
+          "Led impactful data visualization projects using D3.js, transforming complex data into compelling visual narratives. Applied creativity and technical expertise to convey insights effectively, enhancing the user experience and contributing to data-driven decision-making.",
+        technologyUsed: ['Angular', 'D3.js', 'Bootstrap'],
+        imageUrl: 'assets/images/data-viz-lib.jpg'
       },
       {
-        name: 'Build a Shopping Cart',
-        url: 'https://www.google.com/',
+        name: 'MEAN login logout',
+        url: 'https://github.com/swapniltech0390/mean-login-logout',
         description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        technologyUsed: [],
-        imageUrl: 'assets/images/sample.jpg'
+          "Engineered a secure login/logout cart system using MEAN stack. Implemented robust authentication mechanisms, ensuring user data integrity. Leveraged MongoDB for seamless data storage, while Angular and Node.js facilitated dynamic user interactions, creating a fluid and secure e-commerce experience.",
+        technologyUsed: ['Angular','Node','Express','MongoDB'],
+        imageUrl: 'assets/images/mean.jpg'
       }
     ]
   };
