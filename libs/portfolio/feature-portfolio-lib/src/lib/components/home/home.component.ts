@@ -19,6 +19,8 @@ export class HomeComponent implements AfterViewInit {
   experienceViewElement!: ElementRef;
   @ViewChild('projectsView')
   projectsViewElement!: ElementRef;
+  @ViewChild('pointer')
+  pointer!: ElementRef;
 
   public currentActive = 1;
   public aboutViewOffset = 0;
@@ -30,6 +32,13 @@ export class HomeComponent implements AfterViewInit {
     this.experienceViewOffset =
       this.experienceViewElement.nativeElement.offsetTop;
     this.projectsViewOffset = this.projectsViewElement.nativeElement.offsetTop;
+  }
+
+  @HostListener('mousemove', ['$event'])
+  onMouseEnter($event: MouseEvent) {
+    const bodyHeight = document.body.offsetHeight;
+    this.pointer.nativeElement.style.background = `radial-gradient(600px at ${$event.pageX}px ${$event.pageY}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+    this.pointer.nativeElement.style.height = `${bodyHeight}px`;
   }
 
   @HostListener('window:scroll', ['$event'])

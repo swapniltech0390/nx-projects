@@ -1,4 +1,10 @@
 @import '../../../../assets/styles/styles';
+.pointer {
+  z-index: 30;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
 .container-fluid {
   background: $steelBlue;
   color: $white;
