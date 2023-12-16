@@ -1,1 +1,29 @@
-<p>project-template works!</p>
+<div class="container p-0">
+    <div class="card mb-3 text-white rounded p-4" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-2">
+                <img [src]="projectDetails.imageUrl" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-10 p-0">
+                <div class="card-body pt-0">
+                    <h5 class="card-title">{{projectDetails.name}}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                        </svg>
+                    </h5>
+                    <p class="card-text">{{projectDetails.description}}</p>
+                    <div class="card-text">
+                        <div class="row ms-0">
+                            <div class="col technology me-2 mt-2 rounded-pill text-center col-sm-auto"
+                                *ngFor="let technology of projectDetails.technologyUsed">
+                                {{technology}}</div>
+                        </div>
+                    </div>
+                    <a [href]="projectDetails.url" target="_blank" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

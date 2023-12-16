@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Experience } from '../../models/experienceData.model';
+import { Experience } from '../../models/experience.model';
 
 @Component({
   selector: 'feature-portfolio-experience-template',

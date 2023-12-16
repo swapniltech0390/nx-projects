@@ -1,0 +1,22 @@
+@import '../../../../assets/styles/styles';
+.container {
+  .card {
+    background: $steelBlue;
+    &:hover {
+      background: $steelBlueLight;
+
+      .card-title {
+        color: $teal;
+
+        .bi-arrow-up-right {
+          transform: translate(5px, -5px);
+        }
+      }
+    }
+
+    .technology {
+      background-color: $tealLight;
+      color: $teal;
+    }
+  }
+}

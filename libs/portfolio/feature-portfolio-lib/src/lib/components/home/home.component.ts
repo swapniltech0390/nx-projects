@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { Experience } from '../../models/experienceData.model';
+import { Experience } from '../../models/experience.model';
+import { Project } from '../../models/project.model';
 
 @Component({
   selector: 'feature-portfolio-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-   experienceData: Experience[] = [
-     {
+  experienceData: Experience[] = [
+    {
       start: 'OCT 2022',
       end: 'Present',
       role: 'Senior Software Developer',
@@ -55,8 +56,27 @@ export class HomeComponent {
         'Bootstrap',
         'SASS',
         'GIT',
-        'AGILE',
+        'AGILE'
       ]
+    }
+  ];
+
+  projects: Project[] = [
+    {
+      name: 'Build a Spotify Connected',
+      url: 'https://www.spotify.com',
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      technologyUsed: ['Angular 14', 'MongoDB', 'GraphQL', 'NX Monorepo'],
+      imageUrl: 'assets/images/sample.jpg'
+    },
+    {
+      name: 'Build a Shopping Cart',
+      url: 'https://www.google.com/',
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      technologyUsed: [],
+      imageUrl: 'assets/images/sample.jpg'
     }
   ];
 }
