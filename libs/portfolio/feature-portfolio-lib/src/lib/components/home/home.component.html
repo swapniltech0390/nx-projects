@@ -2,14 +2,40 @@
     <div class="row gx-5">
         <div class="col-xl-6 left">
             <div class="fixed-column ps-4 pe-4">
-                <h1>Swapnil Jain</h1>
-                <h3>Experienced Front-End Engineer</h3>
-                <h5>I build exceptional and accessible digital experiences for the web.</h5>
+                <div class="row gy-5">
+                    <div class="col-12">
+                        <h1>Swapnil Jain</h1>
+                        <h3>Experienced Front-End Engineer</h3>
+                        <h5>I build exceptional and accessible digital experiences for the web.</h5>
+                    </div>
+                    <div class="col-12">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link About" aria-current="page" href="#about"
+                                [ngClass]="{'active': currentActive === 1}">
+                                    <ng-container [ngTemplateOutlet]="simpleLink"
+                                        [ngTemplateOutletContext]="{label:'About'}"></ng-container>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link experience" href="#experience" 
+                                [ngClass]="{'active': currentActive === 2}">
+                                    <ng-container [ngTemplateOutlet]="simpleLink"
+                                        [ngTemplateOutletContext]="{label:'Experience'}"></ng-container></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link projects" href="#projects"
+                                [ngClass]="{'active': currentActive === 3}"><ng-container [ngTemplateOutlet]="simpleLink"
+                                        [ngTemplateOutletContext]="{label:'Projects'}"></ng-container></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-xl-6 right">
-            <div class="row gy-5">
-                <div class="col-12 ps-4 pe-4">
+            <div class="row">
+                <div class="col-12 ps-4 pe-4" id="about" #aboutView>
                     <p>Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first
                         into
                         the rabbit hole
@@ -33,7 +59,7 @@
                         Hyrule
                         searching for Korok seeds.</p>
                 </div>
-                <div class="col-12 experience">
+                <div class="col-12 experience" id="experience" #experienceView>
                     <feature-portfolio-experience-template *ngFor="let experience of experienceData"
                         [experienceDetails]=experience></feature-portfolio-experience-template>
                     <div class="full-resume-link">
@@ -47,7 +73,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-12 projects">
+                <div class="col-12 projects" id="projects" #projectsView>
                     <feature-portfolio-project-template *ngFor="let project of projects"
                         [projectDetails]=project></feature-portfolio-project-template>
                 </div>
@@ -60,3 +86,11 @@
         </div>
     </div>
 </div>
+
+<ng-template #simpleLink let-label='label'>
+    <svg height="5" width="30">
+        <line x1="0" y1="0" x2="200" y2="0" style="stroke-width:2" />
+        Sorry, your browser does not support inline SVG.
+    </svg>
+    <span>{{label}}</span>
+</ng-template>

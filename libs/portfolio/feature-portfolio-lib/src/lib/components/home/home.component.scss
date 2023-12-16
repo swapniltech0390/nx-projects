@@ -4,21 +4,43 @@
   padding: 0 6rem;
   color: $white;
   font-size: 1rem;
-  padding-bottom: 500px;
 
-  .left,
-  .right {
-    padding-top: 100px;
-  }
   .left {
+    padding-top: 100px;
     @media only screen and (min-width: 1200px) {
       top: 0;
       max-height: 100vh;
       position: sticky;
     }
+    .nav {
+      .nav-link {
+        color: inherit;
+        opacity: 0.5;
+
+        svg {
+          margin-right: 2px;
+          line {
+            stroke: $white;
+          }
+        }
+        &:hover,
+        &.active {
+          opacity: 1;
+          svg {
+            width: 50px;
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.15s;
+          }
+        }
+      }
+    }
   }
 
   .right {
+    .row > .col-12 {
+      padding-top: 100px;
+    }
     .full-resume-link > a.link {
       color: inherit;
       text-decoration-line: none;

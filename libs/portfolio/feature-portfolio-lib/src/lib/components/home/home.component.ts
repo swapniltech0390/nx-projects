@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Experience } from '../../models/experience.model';
 import { Project } from '../../models/project.model';
 
@@ -7,7 +7,37 @@ import { Project } from '../../models/project.model';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit{
+   @ViewChild('aboutView')
+  aboutViewElement!: ElementRef;
+  @ViewChild('experienceView')
+  experienceViewElement!: ElementRef;
+  @ViewChild('projectsView')
+  projectsViewElement!: ElementRef;
+
+  public currentActive = 1;
+  public aboutViewOffset = 0;
+  public experienceViewOffset = 0;
+  public projectsViewOffset = 0;
+
+   ngAfterViewInit() {
+    this.aboutViewOffset = this.aboutViewElement.nativeElement.offsetTop;
+    this.experienceViewOffset = this.experienceViewElement.nativeElement.offsetTop;
+    this.projectsViewOffset = this.projectsViewElement.nativeElement.offsetTop;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  checkOffsetTop() {
+    if (window.pageYOffset >= this.aboutViewOffset && window.pageYOffset < this.experienceViewOffset) {
+      this.currentActive = 1;
+    } else if (window.pageYOffset >= this.experienceViewOffset && window.pageYOffset < this.projectsViewOffset) {
+      this.currentActive = 2;
+    } else if (window.pageYOffset >= this.projectsViewOffset) {
+      this.currentActive = 3;
+    } else {
+      this.currentActive = 1;
+    }
+  }
   experienceData: Experience[] = [
     {
       start: 'OCT 2022',
