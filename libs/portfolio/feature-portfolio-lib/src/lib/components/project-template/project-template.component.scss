@@ -2,6 +2,14 @@
 .container {
   .card {
     background: $steelBlue;
+    color: $grey;
+    .card-title {
+      color: $lightGrey;
+    }
+    .description {
+      font-size: 0.875rem;
+    }
+
     &:hover {
       background: $steelBlueLight;
 

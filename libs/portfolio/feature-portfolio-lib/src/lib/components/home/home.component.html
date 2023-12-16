@@ -1,66 +1,48 @@
-<div class="container-fluid">
-    <div class="row gx-5">
-        <div class="col-xl-6 left">
-            <div class="fixed-column ps-4 pe-4">
-                <div class="row gy-5">
-                    <div class="col-12">
-                        <h1>Swapnil Jain</h1>
-                        <h3>Experienced Front-End Engineer</h3>
-                        <h5>I build exceptional and accessible digital experiences for the web.</h5>
-                    </div>
-                    <div class="col-12">
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link About" aria-current="page" href="#about"
-                                [ngClass]="{'active': currentActive === 1}">
-                                    <ng-container [ngTemplateOutlet]="simpleLink"
-                                        [ngTemplateOutletContext]="{label:'About'}"></ng-container>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link experience" href="#experience" 
-                                [ngClass]="{'active': currentActive === 2}">
-                                    <ng-container [ngTemplateOutlet]="simpleLink"
-                                        [ngTemplateOutletContext]="{label:'Experience'}"></ng-container></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link projects" href="#projects"
-                                [ngClass]="{'active': currentActive === 3}"><ng-container [ngTemplateOutlet]="simpleLink"
-                                        [ngTemplateOutletContext]="{label:'Projects'}"></ng-container></a>
-                            </li>
-                        </ul>
-                    </div>
+<div class="container-fluid pt-0 pb-0 ps-5 pe-5">
+    <div class="row gx-4 ps-5 pe-5">
+        <div class="col-xl-5 left">
+            <div class="row h-100 gy-5 ps-4 pe-4">
+                <div class="col-12 align-self-start profile-details">
+                    <p class="name">{{profile.name}}</p>
+                    <p class="role">{{profile.role}}</p>
+                    <p class="short-description">{{profile.shortDescription}}</p>
+                </div>
+                <div class="col-12">
+                    <ul class="nav navigation-links flex-column">
+                        <ng-container [ngTemplateOutlet]="navigationLink"
+                            [ngTemplateOutletContext]="{name:'about',label:'About', status:1}"></ng-container>
+                        <ng-container [ngTemplateOutlet]="navigationLink"
+                            [ngTemplateOutletContext]="{name:'experience',label:'Experience', status:2}"></ng-container>
+                        <ng-container [ngTemplateOutlet]="navigationLink"
+                            [ngTemplateOutletContext]="{name:'projects',label:'Projects', status:3}"></ng-container>
+                    </ul>
+                </div>
+                <div class="col-12 align-self-end">
+                    <nav class="navbar navbar-icon">
+                        <div class="container justify-content-start">
+                            <a class="navbar-brand" href="{{profile.gitHubUrl}}" target="_blank">
+                                <ng-container [ngTemplateOutlet]="gitHub"></ng-container>
+                            </a>
+                            <a class="navbar-brand" href="{{profile.linkedInUrl}}" target="_blank">
+                                <ng-container [ngTemplateOutlet]="linkdin"></ng-container>
+                            </a>
+                            <a class="navbar-brand" href="mailto:{{profile.mailTo}}">
+                                <ng-container [ngTemplateOutlet]="mailTo"></ng-container>
+                            </a>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
-        <div class="col-xl-6 right">
+        <div class="col-xl-7 right">
             <div class="row">
-                <div class="col-12 ps-4 pe-4" id="about" #aboutView>
-                    <p>Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first
-                        into
-                        the rabbit hole
-                        of
-                        coding and web development. Fast-forward to today, and I’ve had the privilege of building
-                        software
-                        for an
-                        advertising
-                        agency, a start-up, a student-led design studio, and a huge corporation.</p>
-                    <p>My main focus these days is building products and leading projects for our clients at
-                        Upstatement. In
-                        my free time
-                        I've
-                        also released an online video course that covers everything you need to know to build a web app
-                        with
-                        the Spotify
-                        API.</p>
-                    <p>When I’m not at the computer, I’m usually rock climbing, hanging out with my wife and two cats,
-                        or
-                        running around
-                        Hyrule
-                        searching for Korok seeds.</p>
+                <div class="col-12 about ps-4 pe-4" id="about" #aboutView>
+                    <p [innerHTML]="profile.descriptionLine1"></p>
+                    <p [innerHTML]="profile.descriptionLine2"></p>
+                    <p [innerHTML]="profile.descriptionLine3"></p>
                 </div>
                 <div class="col-12 experience" id="experience" #experienceView>
-                    <feature-portfolio-experience-template *ngFor="let experience of experienceData"
+                    <feature-portfolio-experience-template *ngFor="let experience of profile.experience"
                         [experienceDetails]=experience></feature-portfolio-experience-template>
                     <div class="full-resume-link">
                         <a class="link link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline-opacity-75-hover"
@@ -74,23 +56,65 @@
                     </div>
                 </div>
                 <div class="col-12 projects" id="projects" #projectsView>
-                    <feature-portfolio-project-template *ngFor="let project of projects"
+                    <feature-portfolio-project-template *ngFor="let project of profile.projects"
                         [projectDetails]=project></feature-portfolio-project-template>
                 </div>
-                <div class="col-12 foot-note">
-                    Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Next.js and
-                    Tailwind CSS, deployed
-                    with Vercel. All text is set in the Inter typeface.
+                <div class="col-12 pt-2 pb-5" [innerHTML]="profile.bottomNote">
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<ng-template #simpleLink let-label='label'>
-    <svg height="5" width="30">
-        <line x1="0" y1="0" x2="200" y2="0" style="stroke-width:2" />
-        Sorry, your browser does not support inline SVG.
+
+<ng-template #navigationLink let-name='name' let-label='label' let-status='status'>
+    <li class="nav-item">
+        <a class="{{'nav-link ' + name}}" [ngClass]="{'active': currentActive === status}" aria-current="page"
+            href="{{'#'+name}}">
+            <svg height="5" width="30">
+                <line x1="0" y1="0" x2="200" y2="0" style="stroke-width:2" />
+                Sorry, your browser does not support inline SVG.
+            </svg>
+            <span>{{label}}</span>
+        </a>
+    </li>
+</ng-template>
+
+<ng-template #gitHub>
+    <svg width="30" height="30" viewBox="0 0 20 20">
+        <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+            <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)">
+                <g class="icon" transform="translate(56.000000, 160.000000)">
+                    <path
+                        d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+                        id="github-[#142]">
+
+                    </path>
+                </g>
+            </g>
+        </g>
     </svg>
-    <span>{{label}}</span>
+</ng-template>
+<ng-template #linkdin>
+    <svg width="30" height="30" viewBox="0 0 32 32">
+        <title>linkedin</title>
+        <path class="icon"
+            d="M28.778 1.004h-25.56c-0.008-0-0.017-0-0.027-0-1.199 0-2.172 0.964-2.186 2.159v25.672c0.014 1.196 0.987 2.161 2.186 2.161 0.010 0 0.019-0 0.029-0h25.555c0.008 0 0.018 0 0.028 0 1.2 0 2.175-0.963 2.194-2.159l0-0.002v-25.67c-0.019-1.197-0.994-2.161-2.195-2.161-0.010 0-0.019 0-0.029 0h0.001zM9.9 26.562h-4.454v-14.311h4.454zM7.674 10.293c-1.425 0-2.579-1.155-2.579-2.579s1.155-2.579 2.579-2.579c1.424 0 2.579 1.154 2.579 2.578v0c0 0.001 0 0.002 0 0.004 0 1.423-1.154 2.577-2.577 2.577-0.001 0-0.002 0-0.003 0h0zM26.556 26.562h-4.441v-6.959c0-1.66-0.034-3.795-2.314-3.795-2.316 0-2.669 1.806-2.669 3.673v7.082h-4.441v-14.311h4.266v1.951h0.058c0.828-1.395 2.326-2.315 4.039-2.315 0.061 0 0.121 0.001 0.181 0.003l-0.009-0c4.5 0 5.332 2.962 5.332 6.817v7.855z">
+        </path>
+    </svg>
+</ng-template>
+
+<ng-template #mailTo>
+    <svg width="35" height="35" viewBox="0 -3.5 32 32">
+        <g stroke="none" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+            <g id="Icon-Set-Filled" class="icon" sketch:type="MSLayerGroup"
+                transform="translate(-414.000000, -261.000000)">
+                <path
+                    d="M430,275.916 L426.684,273.167 L415.115,285.01 L444.591,285.01 L433.235,273.147 L430,275.916 L430,275.916 Z M434.89,271.89 L445.892,283.329 C445.955,283.107 446,282.877 446,282.634 L446,262.862 L434.89,271.89 L434.89,271.89 Z M414,262.816 L414,282.634 C414,282.877 414.045,283.107 414.108,283.329 L425.147,271.927 L414,262.816 L414,262.816 Z M445,261 L415,261 L430,273.019 L445,261 L445,261 Z"
+                    id="mail" sketch:type="MSShapeGroup">
+
+                </path>
+            </g>
+        </g>
+    </svg>
 </ng-template>

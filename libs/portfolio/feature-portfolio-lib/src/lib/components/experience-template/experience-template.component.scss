@@ -2,6 +2,17 @@
 .container {
   .card {
     background: $steelBlue;
+    color: $grey;
+    .card-title {
+      color: $lightGrey;
+    }
+    .duration{
+      font-size: 0.75rem;
+    }
+    .description{
+      font-size: 0.875rem;
+    }
+
     &:hover {
       background: $steelBlueLight;
 
@@ -17,6 +28,9 @@
     .technology {
       background-color: $tealLight;
       color: $teal;
+      line-height: 2.5;
+      font-weight: 600;
+      font-size: 0.75rem;
     }
   }
 }

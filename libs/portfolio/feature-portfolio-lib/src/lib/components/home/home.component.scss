@@ -1,24 +1,37 @@
 @import '../../../../assets/styles/styles';
 .container-fluid {
   background: $steelBlue;
-  padding: 0 6rem;
   color: $white;
-  font-size: 1rem;
 
   .left {
-    padding-top: 100px;
-    @media only screen and (min-width: 1200px) {
-      top: 0;
-      max-height: 100vh;
-      position: sticky;
+    padding-top: 6rem;
+    top: 0;
+    max-height: 100vh;
+    position: sticky;
+
+    .profile-details {
+      p {
+        margin-bottom: 0.5rem;
+        &.name {
+          font-size: 3rem;
+        }
+        &.role {
+          font-size: 1.25rem;
+        }
+        &.short-description {
+          color: $grey;
+          max-width: 20rem;
+        }
+      }
     }
-    .nav {
+    .navigation-links {
       .nav-link {
         color: inherit;
         opacity: 0.5;
+        display: inline-block;
 
         svg {
-          margin-right: 2px;
+          margin-right: 0.25rem;
           line {
             stroke: $white;
           }
@@ -35,23 +48,47 @@
         }
       }
     }
+    .navbar-brand {
+      svg {
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+
+        .icon {
+          fill: $white;
+        }
+      }
+    }
   }
 
   .right {
+    color: $grey;
     .row > .col-12 {
-      padding-top: 100px;
+      padding-top: 6rem;
     }
-    .full-resume-link > a.link {
-      color: inherit;
-      text-decoration-line: none;
 
-      &:hover {
-        text-decoration-color: $teal;
-        text-decoration-line: underline;
-        .bi-arrow-right {
-          transform: translate(5px, 0);
+    .full-resume-link {
+      a.link {
+        color: $lightGrey;
+        text-decoration-line: none;
+
+        &:hover {
+          text-decoration-color: $teal;
+          text-decoration-line: underline;
+          .bi-arrow-right {
+            transform: translate(5px, 0);
+          }
         }
       }
+    }
+  }
+}
+
+:host ::ng-deep {
+  .right {
+    b {
+      color: $lightGrey;
     }
   }
 }
