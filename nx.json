@@ -52,5 +52,20 @@
     "@nx/angular:component": {
       "style": "scss"
     }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@vercel/remote-nx",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ],
+        "token": "cg58VwAqimQfH69AOY48gvST",
+        "teamId": "PbRmpiP1uLvN6kahcDAGFJZQ"
+      }
+    }
   }
 }
