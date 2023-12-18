@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../../../dist/out-tsc",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "types": []
+  },
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/test-setup.ts",
+    "jest.config.ts",
+    "src/**/*.test.ts"
+  ],
+  "include": ["src/**/*.ts", "../../services/src/lib/services/chart.generation.service.ts", "../../services/src/lib/services/information-request.service.spec.ts", "../../services/src/lib/services/information-request.service.ts", "../../services/src/lib/services/interaction.service.spec.ts", "../../services/src/lib/services/interaction.service.ts"]
+}

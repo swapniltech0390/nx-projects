@@ -1,0 +1,111 @@
+{
+  "name": "app-data-viz-library",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app-data-viz-library",
+  "sourceRoot": "apps/app-data-viz-library/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/app-data-viz-library",
+        "index": "apps/app-data-viz-library/src/index.html",
+        "browser": "apps/app-data-viz-library/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/app-data-viz-library/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/app-data-viz-library/src/favicon.ico",
+          "apps/app-data-viz-library/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/line-chart/assets",
+            "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/stack-chart/assets",
+            "output": "./assets"
+          }
+        ],
+        "styles": [
+          "apps/app-data-viz-library/src/styles.scss",
+          "node_modules/bootstrap/scss/bootstrap.scss"
+        ],
+        "scripts": [
+          "node_modules/d3/dist/d3.min.js",
+          "node_modules/bootstrap/dist/js/bootstrap.min.js"
+        ]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "app-data-viz-library:build:production"
+        },
+        "development": {
+          "buildTarget": "app-data-viz-library:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "app-data-viz-library:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "apps/app-data-viz-library/jest.config.ts"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "app-data-viz-library:build",
+        "staticFilePath": "dist/apps/app-data-viz-library/browser"
+      }
+    }
+  }
+}

@@ -15,9 +15,18 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@data-viz/line-chart": [
+        "libs/data-viz/shared/components/line-chart/src/index.ts"
+      ],
+      "@data-viz/services": ["libs/data-viz/shared/services/src/index.ts"],
+      "@data-viz/stack-chart": [
+        "libs/data-viz/shared/components/stack-chart/src/index.ts"
+      ],
+      "@data-viz/types": ["libs/data-viz/shared/types/src/index.ts"],
       "@portfolio/feature-portfolio-lib": [
         "libs/portfolio/feature-portfolio-lib/src/index.ts"
-      ]
+      ],
+      "feature-dataviz-lib": ["libs/data-viz/feature-dataviz-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
