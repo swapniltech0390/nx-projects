@@ -28,6 +28,7 @@ export class HomeComponent implements AfterViewInit {
   public projectsViewOffset = 0;
 
   ngAfterViewInit() {
+    console.log('change push for vercel build');
     this.aboutViewOffset = this.aboutViewElement.nativeElement.offsetTop;
     this.experienceViewOffset =
       this.experienceViewElement.nativeElement.offsetTop;
