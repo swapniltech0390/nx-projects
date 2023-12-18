@@ -22,7 +22,12 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/app-portfolio-ng/src/favicon.ico",
-          "apps/app-portfolio-ng/src/assets"
+          "apps/app-portfolio-ng/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/portfolio/feature-portfolio-lib/assets",
+            "output": "./assets"
+          }
         ],
         "styles": [
           "apps/app-portfolio-ng/src/styles.scss",

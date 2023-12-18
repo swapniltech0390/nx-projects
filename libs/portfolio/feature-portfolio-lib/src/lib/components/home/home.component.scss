@@ -10,10 +10,7 @@
   color: $white;
 
   .left {
-    padding-top: 6rem;
-    top: 0;
-    max-height: 100vh;
-    position: sticky;
+    padding-top: 2rem;
 
     .profile-details {
       p {
@@ -26,7 +23,6 @@
         }
         &.short-description {
           color: $grey;
-          max-width: 20rem;
         }
       }
     }
@@ -71,7 +67,11 @@
   .right {
     color: $grey;
     .row > .col-12 {
-      padding-top: 6rem;
+      .section-header {
+        backdrop-filter: blur(10px);
+        background-color: $steelBlue;
+      }
+      padding-top: 3rem;
       &.bottom-note {
         font-size: 0.875rem;
         max-width: 40rem;
@@ -90,6 +90,27 @@
             transform: translate(5px, 0);
           }
         }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .left {
+      padding-top: 6rem;
+      top: 0;
+      max-height: 100vh;
+      position: sticky;
+      .profile-details {
+        p {
+          &.short-description {
+            max-width: 20rem;
+          }
+        }
+      }
+    }
+    .right {
+      .row > .col-12 {
+        padding-top: 6rem;
       }
     }
   }

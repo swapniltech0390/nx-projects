@@ -1,12 +1,12 @@
-<div class="container p-0">
-    <div class="card rounded p-4">
+<div class="container p-0 mt-3">
+    <div class="card rounded p-xl-4">
         <div class="row no-gutters">
-            <div class="col-md-3 duration">
+            <div class="col-12 col-sm-3 duration pb-2">
                 <span class="start">{{experienceDetails.start}}</span>
                 <span> - </span>
                 <span class="end">{{experienceDetails.end}}</span>
             </div>
-            <div class="col-md-9 p-0">
+            <div class="col-12 col-sm-9 p-0">
                 <div class="card-body pt-0">
                     <h5 class="card-title">{{experienceDetails.role}} &middot; {{experienceDetails.companyName}}
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -18,7 +18,7 @@
                     <p class="card-text description">{{experienceDetails.description}}</p>
                     <div class="card-text">
                         <div class="row ms-0">
-                            <div class="col technology me-2 mt-2 rounded-pill text-center col-sm-auto"
+                            <div class="col-3 lh-lg col-sm-3 technology me-2 mt-2 rounded-pill text-center col-sm-auto"
                                 *ngFor="let technology of experienceDetails.technologyUsed">
                                 {{technology}}</div>
                         </div>
