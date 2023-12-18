@@ -131,7 +131,7 @@ export class HomeComponent implements AfterViewInit {
     projects: [
       {
         name: 'Build a Data Visualization Library',
-        url: 'https://data-viz-lab.web.app/',
+        url: 'https://app-data-viz-library.vercel.app/',
         description:
           "Led impactful data visualization projects using D3.js, transforming complex data into compelling visual narratives. Applied creativity and technical expertise to convey insights effectively, enhancing the user experience and contributing to data-driven decision-making.",
         technologyUsed: ['Angular', 'D3.js', 'Bootstrap'],
