@@ -32,6 +32,56 @@
             "glob": "**/*",
             "input": "libs/data-viz/shared/components/stack-chart/assets",
             "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/area-chart/assets",
+            "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/bar-chart/assets",
+            "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/bubble-chart/assets",
+            "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/donut-chart/assets",
+            "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/force-layout-chart/assets",
+            "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/grouped-bar-chart/assets",
+            "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/horizontal-bar-chart/assets",
+            "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/pie-chart/assets",
+            "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/scatter-chart/assets",
+            "output": "./assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/data-viz/shared/components/scatter-shape-chart/assets",
+            "output": "./assets"
           }
         ],
         "styles": [

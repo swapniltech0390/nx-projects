@@ -15,8 +15,38 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@data-viz/area-chart": [
+        "libs/data-viz/shared/components/area-chart/src/index.ts"
+      ],
+      "@data-viz/bar-chart": [
+        "libs/data-viz/shared/components/bar-chart/src/index.ts"
+      ],
+      "@data-viz/bubble-chart": [
+        "libs/data-viz/shared/components/bubble-chart/src/index.ts"
+      ],
+      "@data-viz/donut-chart": [
+        "libs/data-viz/shared/components/donut-chart/src/index.ts"
+      ],
+      "@data-viz/force-layout-chart": [
+        "libs/data-viz/shared/components/force-layout-chart/src/index.ts"
+      ],
+      "@data-viz/grouped-bar-chart": [
+        "libs/data-viz/shared/components/grouped-bar-chart/src/index.ts"
+      ],
+      "@data-viz/horizontal-bar-chart": [
+        "libs/data-viz/shared/components/horizontal-bar-chart/src/index.ts"
+      ],
       "@data-viz/line-chart": [
         "libs/data-viz/shared/components/line-chart/src/index.ts"
+      ],
+      "@data-viz/pie-chart": [
+        "libs/data-viz/shared/components/pie-chart/src/index.ts"
+      ],
+      "@data-viz/scatter-chart": [
+        "libs/data-viz/shared/components/scatter-chart/src/index.ts"
+      ],
+      "@data-viz/scatter-shape-chart": [
+        "libs/data-viz/shared/components/scatter-shape-chart/src/index.ts"
       ],
       "@data-viz/services": ["libs/data-viz/shared/services/src/index.ts"],
       "@data-viz/stack-chart": [

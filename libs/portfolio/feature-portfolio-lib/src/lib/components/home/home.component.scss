@@ -57,8 +57,11 @@
           opacity: 1;
         }
 
-        .icon {
+        .icon-fill {
           fill: $white;
+        }
+        .icon-stroke{
+          stroke: $white;
         }
       }
     }
