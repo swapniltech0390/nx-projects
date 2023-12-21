@@ -56,6 +56,9 @@
       "@portfolio/contact-us": [
         "libs/shared/components/contact-us/src/index.ts"
       ],
+      "@portfolio/contact-us-api": [
+        "libs/shared/services/feature-contact-us-api/src/index.ts"
+      ],
       "@portfolio/feature-portfolio-lib": [
         "libs/portfolio/feature-portfolio-lib/src/index.ts"
       ],

@@ -1,0 +1,35 @@
+{
+  "name": "contact-us-api",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/services/feature-contact-us-api/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/services/feature-contact-us-api",
+        "tsConfig": "libs/shared/services/feature-contact-us-api/tsconfig.lib.json",
+        "packageJson": "libs/shared/services/feature-contact-us-api/package.json",
+        "main": "libs/shared/services/feature-contact-us-api/src/index.ts",
+        "assets": ["libs/shared/services/feature-contact-us-api/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs contact-us-api {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/shared/services/feature-contact-us-api/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
