@@ -1,0 +1,49 @@
+<div class="root row justify-content-center align-middle m-0">
+    <div class="col-4 align-self-center text-white bg-dark rounded d-flex flex-column pt-3 pb-3">
+        <div>
+            <p class="text-center pt-3 pb-3 h4">Send Us a message</p>
+        </div>
+        <div class="flex-grow-1">
+            <form [formGroup]="contactUs" (ngSubmit)="sendQuery()">
+                <div class="mb-4">
+                    <input type="text" class="form-control" [ngClass]="{'is-invalid': isFullNameValid()}"
+                        formControlName="fullName" placeholder="Full Name">
+                    <div *ngIf="isFullNameValid()" class="invalid-feedback">
+                        Please provide your name.
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <input type="text" class="form-control" formControlName="Email"
+                        [ngClass]="{'is-invalid': isEmailValid()}" placeholder="Eg : example@email.com">
+                    <div *ngIf="isEmailValid()" class="invalid-feedback">
+                        Email is not valid
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <input type="text" class="form-control" formControlName="phoneNumber" pattern="[0-9]+"
+                        [ngClass]="{'is-invalid': isPhoneNumberValid()}" placeholder="Eg : +91 9000000000">
+                    <div *ngIf="isPhoneNumberValid()" class="invalid-feedback">
+                        Phone Number is not valid.
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <textarea class="form-control" formControlName="message" rows="3"
+                        [ngClass]="{'is-invalid': isMessageValid()}" placeholder="Your Message"></textarea>
+                    <div *ngIf="isMessageValid()" class="invalid-feedback">
+                        Please provide a message.
+                    </div>
+                </div>
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" formControlName="sendMeCopy">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Send me a Copy
+                    </label>
+                </div>
+                <div class="mb-4 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary ps-4 pe-4 rounded-pill"
+                        [disabled]="!contactUs.valid">Send Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

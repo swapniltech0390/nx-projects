@@ -28,7 +28,6 @@ export class HomeComponent implements AfterViewInit {
   public projectsViewOffset = 0;
 
   ngAfterViewInit() {
-    console.log('change push for vercel build');
     this.aboutViewOffset = this.aboutViewElement.nativeElement.offsetTop;
     this.experienceViewOffset =
       this.experienceViewElement.nativeElement.offsetTop;
@@ -76,7 +75,7 @@ export class HomeComponent implements AfterViewInit {
     linkedInUrl: 'https://www.linkedin.com/in/swapnil-jain-j90/',
     gitHubUrl: 'https://github.com/swapniltech0390',
     mailTo: 'jainswapnil90@hotmail.com',
-    contactNumber: '+91907275135',
+    contactNumber: '+919407275135',
     bottomNote:'Designed using <b>Bootstrap</b>, coded in <b>VSCode</b>,deployed on <b>Vercel</b> and managed within an <b>NX monorepo</b>. Leveraging these tools, I created an efficient and scalable application, streamlining development and ensuring code consistency.',
     experience: [
       {

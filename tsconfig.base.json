@@ -53,6 +53,9 @@
         "libs/data-viz/shared/components/stack-chart/src/index.ts"
       ],
       "@data-viz/types": ["libs/data-viz/shared/types/src/index.ts"],
+      "@portfolio/contact-us": [
+        "libs/shared/components/contact-us/src/index.ts"
+      ],
       "@portfolio/feature-portfolio-lib": [
         "libs/portfolio/feature-portfolio-lib/src/index.ts"
       ],
