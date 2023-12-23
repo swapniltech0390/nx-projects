@@ -13,7 +13,7 @@ import { ConfigService } from '@nestjs/config';
         transport: {
           host: config.get('MAIL_HOST'),
           secure: false,
-          service: 'hotmail',
+          service: config.get('MAIL_SERVICE'),
           auth: {
             user: config.get('MAIL_USER'),
             pass: config.get('MAIL_PASSWORD')

@@ -12,7 +12,6 @@ export class ContactUsApiController {
   }
   @Post('sendEmail')
   async sendEmail(@Body() userDetails: UserDetails) {
-    console.log('controller ',userDetails);
     return this.contactUsApiService.sendEmail(userDetails);
   }
 }

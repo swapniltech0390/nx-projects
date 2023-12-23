@@ -12,10 +12,6 @@ export class MailService {
     if (userDetails.sendMeCopy) {
       this.maillist.push(userDetails.email);
     }
-    console.log('MAIL_HOST ', this.configService.get('MAIL_HOST'));
-    console.log('MAIL_USER ', this.configService.get('MAIL_USER'));
-    console.log('MAIL_PASSWORD ', this.configService.get('MAIL_PASSWORD'));
-
     await this.mailerService.sendMail({
       to: this.maillist,
       subject: `Query : from ${userDetails.fullName}`,
