@@ -4,31 +4,35 @@ import { MailerModule } from '@nestjs-modules/mailer';
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter';
 import { join } from 'path';
 import { MailService } from './mail.service';
+import { ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
-    MailerModule.forRoot({
-      transport: {
-        host: 'smtp-mail.outlook.com',
-        secure: false,
-        auth: {
-          user: 'jainswapnil90@hotmail.com',
-          pass: 'Zaq1!!!!',
+    MailerModule.forRootAsync({
+      useFactory: async (config: ConfigService) => ({
+        transport: {
+          host: config.get('MAIL_HOST'),
+          secure: false,
+          auth: {
+            user: config.get('MAIL_USER'),
+            pass: config.get('MAIL_PASSWORD')
+          }
         },
-      },
-      defaults: {
-        from: '"Swapnil Jain" jainswapnil90@hotmail.com',
-      },
-      template: {
-        dir: join(__dirname, 'assets/mailTemplates'),
-        adapter: new HandlebarsAdapter(), // or new PugAdapter() or new EjsAdapter()
-        options: {
-          strict: true,
+        defaults: {
+          from: `"${config.get('MAIL_HOST_NAME')}" <${config.get('MAIL_FROM')}>`
         },
-      },
-    }),
+        template: {
+          dir: join(__dirname, 'assets/mailTemplates'),
+          adapter: new HandlebarsAdapter(),
+          options: {
+            strict: true
+          }
+        }
+      }),
+      inject: [ConfigService]
+    })
   ],
   providers: [MailService],
-  exports: [MailService], // 
+  exports: [MailService]
 })
 export class MailModule {}

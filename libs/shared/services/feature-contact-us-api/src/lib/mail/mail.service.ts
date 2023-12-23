@@ -1,11 +1,12 @@
 import { MailerService } from '@nestjs-modules/mailer';
 import { Injectable } from '@nestjs/common';
 import { UserDetails } from '../models/userDetail';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class MailService {
-  constructor(private mailerService: MailerService) {}
-  maillist = ['jainswapnil90@hotmail.com'];
+  constructor(private mailerService: MailerService, private configService:ConfigService) {}
+  maillist = [this.configService.get('MAIL_USER')];
 
   async sendUserQuery(userDetails: UserDetails) {
     if (userDetails.sendMeCopy) {
@@ -15,7 +16,7 @@ export class MailService {
       to: this.maillist,
       subject: `Query : from ${userDetails.fullName}`,
       template: userDetails.sendMeCopy ? './sendCopy' : './userRequest', // `.hbs` extension is appended automatically
-      context: userDetails
+      context: {...userDetails,hostName : this.configService.get('MAIL_HOST_NAME')}
     });
   }
 }

@@ -1,4 +1,5 @@
 @import '../../../../assets/styles/styles';
+@import '../../../../assets/styles/waveEffect.scss';
 .pointer {
   z-index: 30;
   pointer-events: none;
@@ -13,6 +14,8 @@
     padding-top: 2rem;
 
     .profile-details {
+      @include waveEffect;
+
       p {
         margin-bottom: 0.5rem;
         &.name {
@@ -60,7 +63,7 @@
         .icon-fill {
           fill: $white;
         }
-        .icon-stroke{
+        .icon-stroke {
           stroke: $white;
         }
       }

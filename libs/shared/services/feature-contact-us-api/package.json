@@ -2,7 +2,14 @@
   "name": "@portfolio/contact-us-api",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@nestjs-modules/mailer": "^1.10.3",
+    "handlebars": "^4.7.8",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.14",
+    "@nestjs/config": "^3.1.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
