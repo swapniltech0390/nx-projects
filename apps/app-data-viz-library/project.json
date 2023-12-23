@@ -82,7 +82,8 @@
         ],
         "styles": [
           "apps/app-data-viz-library/src/styles.scss",
-          "node_modules/bootstrap/scss/bootstrap.scss"
+          "node_modules/bootstrap/scss/bootstrap.scss",
+          "node_modules/bootstrap-icons/font/bootstrap-icons.css"
         ],
         "scripts": [
           "node_modules/d3/dist/d3.min.js",

@@ -1,7 +1,6 @@
 <div class="root row justify-content-center align-middle m-0">
-    <div class="col-6 align-self-center text-white bg-dark rounded d-flex flex-column pt-3 pb-3 ps-0 pe-0">
-       <div class="row ms-2 me-2">
-        <div class="col-6">
+    <div class="col-10 col-lg-6 row align-self-center text-white rounded p-0">
+        <div class="col-12 col-md-6 left">
             <div>
                 <p class="pt-3 pb-3 h4">Write Us</p>
             </div>
@@ -15,8 +14,8 @@
                         </div>
                     </div>
                     <div class="mb-4">
-                        <input type="text" class="form-control" formControlName="Email" [ngClass]="{'is-invalid': isEmailValid()}"
-                            placeholder="Eg : example@email.com">
+                        <input type="text" class="form-control" formControlName="Email"
+                            [ngClass]="{'is-invalid': isEmailValid()}" placeholder="Eg : example@email.com">
                         <div *ngIf="isEmailValid()" class="invalid-feedback">
                             Email is not valid
                         </div>
@@ -36,24 +35,52 @@
                         </div>
                     </div>
                     <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" formControlName="sendMeCopy">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                            formControlName="sendMeCopy">
                         <label class="form-check-label" for="flexCheckDefault">
                             Send me a Copy
                         </label>
                     </div>
                     <div class="mb-4 d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary ps-4 pe-4 rounded-pill" [disabled]="!contactUs.valid">Send
+                        <button type="submit" class="btn btn-primary ps-4 pe-4 rounded-pill"
+                            [disabled]="!contactUs.valid">Send
                             Now</button>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="col-6 contact-information">
+        <div class="col-12 col-md-6 right contact-information d-flex flex-column">
             <div class="pt-3 pb-3">
                 <p class="h4 heading">Contact Information</p>
-                <p class="h6 sub-heading">Contact Information</p>
+                <p class="h6 sub-heading">We'are open for suggestion or just to have a chat</p>
+            </div>
+            <div class="flex-grow-1">
+                <div class="row mb-5">
+                    <div class="col-1"><i class="bi bi-telephone-outbound"></i></div>
+                    <div class="col">
+                        <span>Phone : </span>
+                        <a class="link-offset-2 link-underline link-underline-opacity-0" href="tel:+919407275135">+91 -
+                            9407275135</a>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-1"><i class="bi bi-envelope"></i></div>
+                    <div class="col">
+                        <span>Email : </span>
+                        <a class="link-offset-2 link-underline link-underline-opacity-0"
+                            href="mailto:jainswapnil90@hotmail.com">jainswapnil90&#64;hotmail.com</a>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-1"><i class="bi bi-browser-chrome"></i></div>
+                    <div class="col">
+                        <span>Website : </span>
+                        <a class="link-offset-2 link-underline link-underline-opacity-0"
+                            href="https://swapnil-portfolio-ng.vercel.app/"
+                            target="_blank">Swapnil Portfolio</a>
+                    </div>
+                </div>
             </div>
         </div>
-       </div>
     </div>
 </div>

@@ -1,3 +1,31 @@
+@import '../../../assets/styles/styles';
+
 .root {
   height: calc(100vh - 56px);
+  .left{
+    background-color: $steelBlueLight;
+  }
+  .right{
+    background-color: $steelBlue;
+  .sub-heading {
+    color: $grey;
+    opacity: 0.7;
+    font-size: 0.8rem;
+  }
+  .col {
+    color: $grey;
+    span {
+      color: $white;
+      opacity: 1;
+      font-weight: 700;
+    }
+    a {
+      color: $grey;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
 }
