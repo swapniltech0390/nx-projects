@@ -9,8 +9,7 @@ export class ContactUsApiService {
     return { message: 'Hello added console log for mail service validation' };
   }
   async sendEmail(userDetails: UserDetails) {
-    console.log('sendEmail ', userDetails);
-
+    
     await this.mailService.sendUserQuery(userDetails);
     return { message: 'ok' };
   }
