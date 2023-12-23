@@ -3,8 +3,7 @@ import { ContactUsComponent } from '@portfolio/contact-us';
 
 export const appRoutes: Route[] = [
   {
-    path: '',
-    pathMatch: 'full',
+    path: 'home',
     loadChildren: () =>
       import('feature-dataviz-lib').then((m) => m.FeatureDatavizLibModule)
   },
@@ -15,6 +14,6 @@ export const appRoutes: Route[] = [
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: 'home'
   }
 ];

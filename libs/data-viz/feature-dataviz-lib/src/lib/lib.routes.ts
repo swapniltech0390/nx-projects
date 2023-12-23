@@ -29,6 +29,6 @@ export const featureDatavizLibRoutes: Route[] = [
   { path: 'scatter-shape', pathMatch: 'full', component: ScatterShapeChartComponent },
   {
     path: '**',
-    component: HomeComponent
+    redirectTo: ''
   }
 ];
