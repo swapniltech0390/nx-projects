@@ -12,7 +12,7 @@ export class MailService {
     if (userDetails.sendMeCopy) {
       this.maillist.push(userDetails.email);
     }
-    await this.mailerService.sendMail({
+        await this.mailerService.sendMail({
       to: this.maillist,
       subject: `Query : from ${userDetails.fullName}`,
       template: userDetails.sendMeCopy ? './sendCopy' : './userRequest', // `.hbs` extension is appended automatically
