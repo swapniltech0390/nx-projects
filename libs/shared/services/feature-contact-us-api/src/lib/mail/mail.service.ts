@@ -12,6 +12,8 @@ export class MailService {
     if (userDetails.sendMeCopy) {
       this.maillist.push(userDetails.email);
     }
+    console.log('mailerService ', userDetails);
+
     await this.mailerService.sendMail({
       to: this.maillist,
       subject: `Query : from ${userDetails.fullName}`,
