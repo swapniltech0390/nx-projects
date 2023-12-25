@@ -7,14 +7,18 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:application",
+      "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/app-data-viz-library",
         "index": "apps/app-data-viz-library/src/index.html",
-        "browser": "apps/app-data-viz-library/src/main.ts",
+        "main": "apps/app-data-viz-library/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/app-data-viz-library/tsconfig.app.json",
+        "customWebpackConfig": {
+          "path": "apps/app-data-viz-library/webpack.config.js"
+        },
+        "preserveSymlinks": true,
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/app-data-viz-library/src/favicon.ico",
@@ -115,7 +119,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@nx/angular:dev-server",
       "configurations": {
         "production": {
           "buildTarget": "app-data-viz-library:build:production"

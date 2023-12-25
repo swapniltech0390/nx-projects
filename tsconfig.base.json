@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular/*": [
+        "node_modules/@angular/*"
+      ],
       "@data-viz/area-chart": [
         "libs/data-viz/shared/components/area-chart/src/index.ts"
       ],
