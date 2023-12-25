@@ -8,12 +8,16 @@
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/app-data-viz-library",
         "index": "apps/app-data-viz-library/src/index.html",
         "main": "apps/app-data-viz-library/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/app-data-viz-library/tsconfig.app.json",
         "customWebpackConfig": {
           "path": "apps/app-data-viz-library/webpack.config.js"
@@ -141,11 +145,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/app-data-viz-library/jest.config.ts"
       }
@@ -155,6 +163,19 @@
       "options": {
         "buildTarget": "app-data-viz-library:build",
         "staticFilePath": "dist/apps/app-data-viz-library/browser"
+      }
+    },
+    "server-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx serve app-data-viz-library"
+          },
+          {
+            "command": "nx serve app-contact-us-api"
+          }
+        ]
       }
     }
   }
