@@ -14,8 +14,7 @@
       "executor": "@swapnil/tools:codeowners",
       "options": {
         "coreReviewers": [
-          "swapniltech0390",
-          "jainswapnil420"
+          "@swapniltech0390"
         ],
         "sources": ["apps","libs"]
       }
