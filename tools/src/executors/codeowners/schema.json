@@ -2,12 +2,12 @@
   "$schema": "http://json-schema.org/schema",
   "version": 2,
   "title": "Codeowners executor",
-  "description": "",
+  "description": " Executor used to generate a CODEOWNERS file for access management on GIT.This will fetch list of reviewers from respective project json files.",
   "type": "object",
   "properties": {
-    "reviewers": {
+    "coreReviewers": {
       "type": "array",
-      "description": "Default set of reviewers if reviewer missing in project json",
+      "description": "Default set of core reviewers if reviewer missing in project json.",
       "items": {
         "type": "string"
       },
@@ -15,7 +15,7 @@
     },
     "sources": {
       "type": "array",
-      "description": "List of roots to fetch reviewers from project json fimes",
+      "description": "List of path to iterate through and find all application and libraries inside these folder to set reviewe in CODEOWNERS.",
       "items": {
         "type": "string"
       },
@@ -23,7 +23,7 @@
     }
   },
   "required": [
-    "reviewers",
+    "coreReviewers",
     "sources"
   ]
 }

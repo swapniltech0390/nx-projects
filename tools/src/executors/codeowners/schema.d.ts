@@ -1,4 +1,4 @@
 export interface CodeownersExecutorSchema {
-    reviewers: string[];
+    coreReviewers: string[];
     sources: string[];
 } // eslint-disable-line

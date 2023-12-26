@@ -13,7 +13,7 @@
     "codeowners": {
       "executor": "@swapnil/tools:codeowners",
       "options": {
-        "reviewers": [
+        "coreReviewers": [
           "swapniltech0390",
           "jainswapnil420"
         ],
