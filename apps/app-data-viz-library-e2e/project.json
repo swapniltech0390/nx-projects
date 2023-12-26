@@ -22,9 +22,17 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     }
   },
   "tags": [],
-  "implicitDependencies": ["app-data-viz-library"]
+  "implicitDependencies": [
+    "app-data-viz-library"
+  ],
+  "reviewers": [
+    "swapniltech0390",
+    "jainswapnil420"
+  ]
 }

@@ -1,0 +1,25 @@
+* swapniltech0390 jainswapnil420
+apps/app-contact-us-api/project.json swapniltech0390
+apps/app-contact-us-api-e2e/project.json swapniltech0390 jainswapnil420
+apps/app-data-viz-library/project.json swapniltech0390 jainswapnil420
+apps/app-data-viz-library-e2e/project.json swapniltech0390 jainswapnil420
+apps/app-portfolio-ng/project.json swapniltech0390 jainswapnil420
+apps/app-portfolio-ng-e2e/project.json swapniltech0390 jainswapnil420
+libs/data-viz/feature-dataviz-lib/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/area-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/bar-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/bubble-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/donut-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/force-layout-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/grouped-bar-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/horizontal-bar-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/line-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/pie-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/scatter-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/scatter-shape-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/components/stack-chart/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/services/project.json swapniltech0390 jainswapnil420
+libs/data-viz/shared/types/project.json swapniltech0390 jainswapnil420
+libs/portfolio/feature-portfolio-lib/project.json swapniltech0390 jainswapnil420
+libs/shared/components/contact-us/project.json swapniltech0390 jainswapnil420
+libs/shared/services/feature-contact-us-api/project.json swapniltech0390 jainswapnil420

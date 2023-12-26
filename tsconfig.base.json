@@ -14,10 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "types": [
+      "node"
+    ],
     "paths": {
-      "@angular/*": [
-        "node_modules/@angular/*"
-      ],
+      "@angular/*": ["node_modules/@angular/*"],
       "@data-viz/area-chart": [
         "libs/data-viz/shared/components/area-chart/src/index.ts"
       ],
@@ -65,6 +66,7 @@
       "@portfolio/feature-portfolio-lib": [
         "libs/portfolio/feature-portfolio-lib/src/index.ts"
       ],
+      "@swapnil/tools": ["tools/src/index.ts"],
       "feature-dataviz-lib": ["libs/data-viz/feature-dataviz-lib/src/index.ts"]
     }
   },

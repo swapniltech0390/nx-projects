@@ -9,6 +9,16 @@
         "config": ".verdaccio/config.yml",
         "storage": "tmp/local-registry/storage"
       }
+    },
+    "codeowners": {
+      "executor": "@swapnil/tools:codeowners",
+      "options": {
+        "reviewers": [
+          "swapniltech0390",
+          "jainswapnil420"
+        ],
+        "sources": ["apps","libs"]
+      }
     }
   }
 }

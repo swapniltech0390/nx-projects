@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "codeowners": {
+      "implementation": "./src/executors/codeowners/executor",
+      "schema": "./src/executors/codeowners/schema.json",
+      "description": "Executor to generate codeoweners rule for application and library"
+    }
+  }
+}
