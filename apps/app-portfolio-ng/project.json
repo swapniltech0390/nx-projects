@@ -7,18 +7,19 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:application",
+      "executor": "@nx/angular:webpack-browser",
       "outputs": [
         "{options.outputPath}"
       ],
       "options": {
         "outputPath": "dist/apps/app-portfolio-ng",
         "index": "apps/app-portfolio-ng/src/index.html",
-        "browser": "apps/app-portfolio-ng/src/main.ts",
+        "main": "apps/app-portfolio-ng/src/main.ts",
         "polyfills": [
           "zone.js"
         ],
         "tsConfig": "apps/app-portfolio-ng/tsconfig.app.json",
+        "preserveSymlinks": true,
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/app-portfolio-ng/src/favicon.ico",
