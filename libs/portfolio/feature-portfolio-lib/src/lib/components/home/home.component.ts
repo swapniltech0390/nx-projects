@@ -131,6 +131,14 @@ export class HomeComponent implements AfterViewInit {
     ],
     projects: [
       {
+        name: 'NPM Package for NX CODEOWNERS',
+        url: 'https://www.npmjs.com/package/@swapniltech0390/nx-codeowners',
+        description:
+          "Developed an open-source npm package aimed at streamlining the generation of CODEOWNERS files for Nx monorepo projects. Contributed to the developer community by providing a valuable tool for code ownership management. Received positive feedback and engagement from the open-source community for the npm package.",
+        technologyUsed: ['NX Monorepo', 'GITHUB'],
+        imageUrl: 'assets/images/node.jpg'
+      },
+      {
         name: 'Build a Data Visualization Library',
         url: 'https://app-data-viz-library.vercel.app/',
         description:
