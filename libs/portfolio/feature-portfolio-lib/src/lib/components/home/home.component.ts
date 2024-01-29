@@ -43,7 +43,7 @@ export class HomeComponent implements AfterViewInit {
 
   @HostListener('window:scroll', ['$event'])
   checkOffsetTop() {
-    const offset = window.pageYOffset + 200; // Added constant to handle the diff of padding
+    const offset = window.pageYOffset + 200; // Added constant to handle the difference of padding
     if (
       offset >= this.aboutViewOffset &&
       window.pageYOffset < this.experienceViewOffset
@@ -69,14 +69,15 @@ export class HomeComponent implements AfterViewInit {
     descriptionLine1:
       'In 2012, my journey as a web developer began, fueled by a passion for crafting digital experiences. Starting with the fundamentals, I gradually honed my skills, evolving through the ever-changing landscape of web development. Over the years, my trajectory led me to embrace the <b>MEAN</b> stack (MongoDB, Express.js, <b>Angular</b>, and Node.js), where I delved into the intricacies of <b>full-stack development</b>.',
     descriptionLine2:
-      "As technology advanced, so did my journey. The transition to a powerful and scalable <b>NX monorepo</b> architecture became a pivotal moment. Embracing this paradigm shift allowed me to efficiently manage projects, enhance collaboration, and maintain <b>code quality</b>.",
+      'As technology advanced, so did my journey. The transition to a powerful and scalable <b>NX monorepo</b> architecture became a pivotal moment. Embracing this paradigm shift allowed me to efficiently manage projects, enhance collaboration, and maintain <b>code quality</b>.',
     descriptionLine3:
       'Outside the coding realm, I find solace and inspiration in the <b>art of travel</b>. Exploring new cultures, tasting diverse cuisines, and immersing myself in unfamiliar landscapes enriches my perspective and fuels creativity in unexpected ways.',
     linkedInUrl: 'https://www.linkedin.com/in/swapnil-jain-j90/',
     gitHubUrl: 'https://github.com/swapniltech0390',
     mailTo: 'jainswapnil90@hotmail.com',
     contactNumber: '+919407275135',
-    bottomNote:'Designed using <b>Bootstrap</b>, coded in <b>VSCode</b>,deployed on <b>Vercel</b> and managed within an <b>NX monorepo</b>. Leveraging these tools, I created an efficient and scalable application, streamlining development and ensuring code consistency.',
+    bottomNote:
+      'Designed using <b>Bootstrap</b>, coded in <b>VSCode</b>,deployed on <b>Vercel</b> and managed within an <b>NX monorepo</b>. Leveraging these tools, I created an efficient and scalable application, streamlining development and ensuring code consistency.',
     experience: [
       {
         start: 'OCT 2022',
@@ -134,7 +135,7 @@ export class HomeComponent implements AfterViewInit {
         name: 'NPM Package for NX CODEOWNERS',
         url: 'https://www.npmjs.com/package/@swapniltech0390/nx-codeowners',
         description:
-          "Developed an open-source npm package aimed at streamlining the generation of CODEOWNERS files for Nx monorepo projects. Contributed to the developer community by providing a valuable tool for code ownership management. Received positive feedback and engagement from the open-source community for the npm package.",
+          'Developed an open-source npm package aimed at streamlining the generation of CODEOWNERS files for Nx monorepo projects. Contributed to the developer community by providing a valuable tool for code ownership management. Received positive feedback and engagement from the open-source community for the npm package.',
         technologyUsed: ['NX Monorepo', 'GITHUB'],
         imageUrl: 'assets/images/node.jpg'
       },
@@ -142,7 +143,7 @@ export class HomeComponent implements AfterViewInit {
         name: 'Build a Data Visualization Library',
         url: 'https://app-data-viz-library.vercel.app/',
         description:
-          "Led impactful data visualization projects using D3.js, transforming complex data into compelling visual narratives. Applied creativity and technical expertise to convey insights effectively, enhancing the user experience and contributing to data-driven decision-making.",
+          'Led impactful data visualization projects using D3.js, transforming complex data into compelling visual narratives. Applied creativity and technical expertise to convey insights effectively, enhancing the user experience and contributing to data-driven decision-making.',
         technologyUsed: ['Angular', 'D3.js', 'Bootstrap'],
         imageUrl: 'assets/images/data-viz-lib.jpg'
       },
@@ -150,8 +151,8 @@ export class HomeComponent implements AfterViewInit {
         name: 'MEAN login logout',
         url: 'https://github.com/swapniltech0390/mean-login-logout',
         description:
-          "Engineered a secure login/logout cart system using MEAN stack. Implemented robust authentication mechanisms, ensuring user data integrity. Leveraged MongoDB for seamless data storage, while Angular and Node.js facilitated dynamic user interactions, creating a fluid and secure e-commerce experience.",
-        technologyUsed: ['Angular','Node','Express','MongoDB'],
+          'Engineered a secure login/logout cart system using MEAN stack. Implemented robust authentication mechanisms, ensuring user data integrity. Leveraged MongoDB for seamless data storage, while Angular and Node.js facilitated dynamic user interactions, creating a fluid and secure e-commerce experience.',
+        technologyUsed: ['Angular', 'Node', 'Express', 'MongoDB'],
         imageUrl: 'assets/images/mean.jpg'
       }
     ]
