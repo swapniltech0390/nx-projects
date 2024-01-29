@@ -43,7 +43,7 @@ export class HomeComponent implements AfterViewInit {
 
   @HostListener('window:scroll', ['$event'])
   checkOffsetTop() {
-    const offset = window.pageYOffset + 200; // Added constant to handle the dif of padding
+    const offset = window.pageYOffset + 200; // Added constant to handle the difference of padding
     if (
       offset >= this.aboutViewOffset &&
       window.pageYOffset < this.experienceViewOffset
