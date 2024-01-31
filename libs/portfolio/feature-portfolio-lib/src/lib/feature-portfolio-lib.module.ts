@@ -9,8 +9,12 @@ import { ProjectTemplateComponent } from './components/project-template/project-
   declarations: [
     HomeComponent,
     ExperienceTemplateComponent,
-    ProjectTemplateComponent,
+    ProjectTemplateComponent
   ],
-  exports: [HomeComponent],
+  exports: [
+    HomeComponent,
+    ExperienceTemplateComponent,
+    ProjectTemplateComponent
+  ]
 })
 export class FeaturePortfolioLibModule {}

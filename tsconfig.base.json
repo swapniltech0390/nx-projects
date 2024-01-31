@@ -14,9 +14,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "paths": {
       "@angular/*": ["node_modules/@angular/*"],
       "@data-viz/area-chart": [
